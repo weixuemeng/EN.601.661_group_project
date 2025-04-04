@@ -9,8 +9,7 @@ local_dir = "./datasets"
 if not os.path.exists(local_dir):
     os.makedirs(local_dir)
 
-snapshot_download(repo_id="bop-benchmark/datasets", 
-                  allow_patterns=f"{dataset_name}/*zip",
+snapshot_download(repo_id=f"bop-benchmark/{dataset_name}", 
                   repo_type="dataset", 
                   local_dir=local_dir)
 
